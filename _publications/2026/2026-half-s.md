@@ -10,8 +10,16 @@ abstract: >-
 cover: /assets/images/covers/half-s.svg
 authors:
   - Jinyang Du
+  - Ruihao Gong#
+  - Linghan Ai
+  - Zining Wang
+  - Yunke Peng
+  - Yao Wang
+  - Lei Yan
+  - Xuefei Wang
+  - Yaoyuan Wang
   - Jinyang Guo
-  - Yifu Ding
+  - Dahua Lin
   - Xianglong Liu
 links:
   OpenReview: https://openreview.net/forum?id=tS572IuceF
