@@ -1,9 +1,26 @@
 @charset "utf-8";
+:root {
+    --ink: #22313f;
+    --muted: #64727e;
+    --blue: #1d5f8f;
+    --green: #2f7a58;
+    --gold: #c9993a;
+    --line: #d9e4ea;
+    --paper: #ffffff;
+    --wash: #f5f8f9;
+}
+
 body {
     font-family: "Lato", "Fira Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
     font-weight: 400;
     padding-top: 5.0rem;
-    color: #23313f;
+    color: var(--ink);
+    background:
+        linear-gradient(180deg, #eef4f6 0, #f8fafb 220px, #f4f7f8 100%) fixed;
+}
+
+body.bg-light {
+    background-color: var(--wash) !important;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -13,6 +30,8 @@ h1, h2, h3, h4, h5, h6,
 
 .card {
     border-radius: 0.5rem!important;
+    border: 1px solid rgba(217, 228, 234, 0.8) !important;
+    box-shadow: 0 0.35rem 1.2rem rgba(21, 37, 51, 0.06) !important;
 }
 
 .card-img-overlay {
@@ -36,35 +55,85 @@ h1, h2, h3, h4, h5, h6,
 
 .text-profile-position {
     font-weight: 400;
+    color: var(--muted);
 }
 
 .text-profile-bio {
     /* font-family: "Raleway"; */
     font-weight: 400;
+    line-height: 1.72;
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: rgba(255, 255, 255, 0.78) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(217, 228, 234, 0.75);
 }
 
 .navbar-brand {
     letter-spacing: 0;
+    color: var(--ink) !important;
 }
 
 a {
-    color: #1d5f8f;
+    color: var(--blue);
 }
 
 a:hover {
-    color: #2f7a58;
+    color: var(--green);
 }
 
 .h1 small,
 .h3,
 h2 {
     letter-spacing: 0;
+}
+
+.h3 {
+    position: relative;
+    padding-bottom: 0.45rem;
+    color: var(--ink);
+}
+
+.h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3.2rem;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue), var(--green), var(--gold));
+}
+
+.card-body {
+    position: relative;
+}
+
+.profile-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue), var(--green), var(--gold));
+}
+
+.profile-card .card-body {
+    padding-top: 1.85rem !important;
+}
+
+.profile-card .figure-img {
+    border-radius: 0.35rem;
+    box-shadow: 0 0.4rem 1.25rem rgba(21, 37, 51, 0.12);
 }
 
 .inline-badge {
@@ -125,7 +194,7 @@ div.lazy {
 }
 
 .advisor-heading {
-    color: #64727e;
+    color: var(--muted);
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0;
@@ -147,7 +216,7 @@ div.lazy {
 }
 
 .advisor-list span {
-    color: #64727e;
+    color: var(--muted);
     font-weight: 700;
 }
 
@@ -161,16 +230,23 @@ div.lazy {
 }
 
 .research-chip {
-    border: 1px solid #d9e4ea;
-    border-left: 4px solid #2f7a58;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--green);
     border-radius: 0.5rem;
     padding: 1rem;
     height: 100%;
-    background: #fbfcfc;
+    background: linear-gradient(180deg, #ffffff 0, #f8fbfa 100%);
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.research-chip:hover {
+    transform: translateY(-2px);
+    border-color: rgba(47, 122, 88, 0.35);
+    box-shadow: 0 0.35rem 1rem rgba(21, 37, 51, 0.08);
 }
 
 .research-chip i {
-    color: #1d5f8f;
+    color: var(--blue);
     font-size: 1.3rem;
     margin-right: 0.4rem;
 }
@@ -183,11 +259,11 @@ div.lazy {
 .research-chip small {
     display: block;
     margin-top: 0.35rem;
-    color: #64727e;
+    color: var(--muted);
 }
 
 .service-block {
-    border-top: 3px solid #c9993a;
+    border-top: 3px solid var(--gold);
     background: #fbfcfc;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -200,5 +276,50 @@ div.lazy {
 
 .service-block p {
     margin-bottom: 0;
-    color: #64727e;
+    color: var(--muted);
+}
+
+.publication-entry {
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.publication-entry:hover {
+    background-color: #f8fbfb;
+}
+
+.publication-entry img {
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+.publication-title {
+    color: var(--ink);
+    font-weight: 700 !important;
+    line-height: 1.35;
+}
+
+.badge-publication {
+    border-radius: 0.35rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 0.22rem 0.45rem;
+}
+
+#navbar-year .nav-link {
+    border-left: 2px solid var(--line);
+    border-radius: 0;
+    color: var(--muted);
+}
+
+#navbar-year .nav-link.active,
+#navbar-year .nav-link:hover {
+    border-left-color: var(--blue);
+    color: var(--blue);
+    background: transparent;
+}
+
+footer.footer {
+    background-color: rgba(255, 255, 255, 0.78) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
