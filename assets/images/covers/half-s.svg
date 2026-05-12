@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-label="Half-S 4-bit training cover">
+  <rect width="900" height="600" fill="#f8fafb"/>
+  <rect x="86" y="84" width="728" height="432" rx="24" fill="#ffffff" stroke="#d9e4ea" stroke-width="3"/>
+  <g stroke="#d9e4ea" stroke-width="2">
+    <path d="M168 408h560M168 348h560M168 288h560M168 228h560"/>
+    <path d="M220 168v260M310 168v260M400 168v260M490 168v260M580 168v260M670 168v260"/>
+  </g>
+  <path d="M168 392c86-18 124-34 174-80 58-54 92-118 158-118 58 0 88 52 136 88 34 25 62 31 92 34" fill="none" stroke="#1d5f8f" stroke-width="9" stroke-linecap="round"/>
+  <path d="M168 364c82-10 129-22 174-52 58-39 91-76 158-76 58 0 89 35 136 58 34 17 62 21 92 23" fill="none" stroke="#2f7a58" stroke-width="9" stroke-linecap="round"/>
+  <line x1="168" y1="392" x2="728" y2="316" stroke="#c9993a" stroke-width="4" stroke-dasharray="12 14"/>
+  <text x="168" y="476" fill="#23313f" font-family="Arial, sans-serif" font-size="44" font-weight="700">Half-S</text>
+  <text x="168" y="512" fill="#64727e" font-family="Arial, sans-serif" font-size="25">Near-lossless 4-bit LLM training</text>
+</svg>

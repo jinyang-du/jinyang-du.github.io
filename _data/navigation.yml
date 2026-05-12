@@ -1,0 +1,9 @@
+pages:
+- name: Home
+  url: /
+- name: Publications
+  url: /publications
+- name: Research
+  url: /#research
+- name: Honors
+  url: /#honors

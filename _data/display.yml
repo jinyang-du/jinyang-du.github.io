@@ -1,0 +1,8 @@
+homepage:
+  show_experience: true
+  show_news: true
+  show_selected_publications: true
+  num_news: 6
+
+footer_text: >-
+  © 2026 Jinyang Du · Blog <a href="https://charles2530.github.io/" target="_blank">charles2530.github.io</a> · Built with <a href="https://github.com/luost26/academic-homepage" target="_blank">academic-homepage</a>

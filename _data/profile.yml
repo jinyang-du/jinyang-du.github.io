@@ -1,0 +1,104 @@
+primary_name: "Jinyang Du"
+secondary_name: ""
+navbar_name: "Jinyang Du"
+
+positions:
+- name: Ph.D. Student
+- name: Beihang University · Computer Science and Technology
+  logo: /assets/images/badges/buaa.jpg
+
+email: "charles2530djy@gmail.com"
+email_alt: "jinyangdu@buaa.edu.cn"
+website: "https://charles2530.github.io/"
+gscholar: "2p1tu6sAAAAJ"
+github: Charles2530
+# cv_link: /files/Jinyang_Du_CV.pdf
+# twitter:
+# wechat_qrcode: /assets/images/etc/wechat.jpg
+# linkedin:
+# orcid:
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I am a Ph.D. student in Computer Science and Technology at Beihang University, advised by
+    <a href="https://scholar.google.com/citations?user=8VY7ZDcAAAAJ" target="_blank">Prof. Xianglong Liu</a>
+    and <a href="https://scholar.google.com/citations?user=8i7Z15kAAAAJ" target="_blank">Prof. Ruihao Gong</a>.
+    My research focuses on <strong>efficient training technologies for world models</strong>,
+    with interests in scalable training, model compression, and system-algorithm co-design for generative AI.
+  </p>
+  <p>
+    I received my B.S. in Computer Science and Technology from Beihang University, ranking in the top 10% of my cohort.
+    My recent work includes a survey on low-bit LLMs, Triton-based low-bit FlashAttention operators, and near-lossless 4-bit LLM training.
+  </p>
+
+advisors:
+- role: Advisor
+  name: Prof. Xianglong Liu
+  url: https://scholar.google.com/citations?user=8VY7ZDcAAAAJ
+- role: Co-advisor
+  name: Prof. Ruihao Gong
+  url: https://scholar.google.com/citations?user=8i7Z15kAAAAJ
+
+portrait_url: /assets/images/portrait-jinyang.jpg
+portrait_caption: >-
+  Jinyang Du
+
+education:
+- name: Beihang University
+  logo: /assets/images/badges/buaa.jpg
+  dept: School of Computer Science and Engineering
+  position: >-
+    Ph.D. Student, Computer Science and Technology
+  date: Sep. 2025 - Present
+- name: Beihang University
+  logo: /assets/images/badges/buaa.jpg
+  dept: School of Computer Science and Engineering
+  position: B.S. in Computer Science and Technology · GPA 3.83/4 · Top 10%
+  date: Sep. 2021 - Jun. 2025
+
+experience:
+- name: Beihang University
+  logo: /assets/images/badges/buaa.jpg
+  dept: Efficient LLMs and Model Quantization
+  position: Worked on block-search quantization experiments for LLaMA-based models and surveyed low-bit LLM frameworks for a review paper.
+  date: 2023 - Present
+- name: Beihang University
+  logo: /assets/images/badges/buaa.jpg
+  dept: Long-context Inference and Low-bit Operators
+  position: Participated in a Baidu long-context project and designed low-bit mixed-precision operators for quantized inference acceleration.
+  date: 2024 - 2025
+- name: Huawei 2012 Laboratories
+  logo: /assets/images/badges/buaa.jpg
+  dept: Research Internship
+  position: Worked on photovoltaic AI development, including Pangu data processing and model training.
+  date: 2024
+- name: Beihang University
+  logo: /assets/images/badges/buaa.jpg
+  dept: Low-precision Training and Video Segmentation Quantization
+  position: Contributed to a Huawei low-precision training project, the Hif8 numerical format specification, and simulated quantization for SAM2 video segmentation.
+  date: 2024 - Present
+
+awards:
+- name: LPCV 2026 Track 1 & Track 2 Champion
+  date: 2026
+- name: Graduate Academic Scholarship, ranked 1st
+  date: 2025
+- name: Academic Excellence Scholarship, Discipline Competition Scholarship, Social Work Scholarship, Social Practice Scholarship
+  date: Undergraduate
+- name: Qian-Shen Scholarship and Lenovo Scholarship
+  date: Undergraduate
+- name: First Prize, Chinese Mathematics Competition; Beijing First Prize, Contemporary Undergraduate Mathematical Contest in Modeling
+  date: Undergraduate
+- name: Fengru Cup Main Track, Third Prize as first author and Second Prize as second author
+  date: Undergraduate
+- name: University-level Merit Student, Outstanding Student Cadre, Outstanding Student, and Outstanding Party School Trainee
+  date: Undergraduate
+
+leadership:
+- title: Leader, Dandelion Rural Practice Team
+  text: Led field practice trips to Zhongyang, Shanxi and Yu County, Hebei.
+- title: Student Union Activity Practice Department
+  text: Helped organize more than 10 activities and completed over 250 hours of volunteer service.
+- title: College and Residential College Service
+  text: Served as organization committee member, cohort academic representative, and class coordinator.

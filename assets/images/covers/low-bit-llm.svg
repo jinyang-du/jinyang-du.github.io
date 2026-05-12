@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-label="Low-bit LLM quantization cover">
+  <rect width="900" height="600" fill="#f7faf9"/>
+  <rect x="72" y="72" width="756" height="456" rx="22" fill="#ffffff" stroke="#d7e2e8" stroke-width="3"/>
+  <g fill="none" stroke="#1d5f8f" stroke-width="6" stroke-linecap="round">
+    <path d="M190 170h160m-160 58h260m-260 58h210m-210 58h290"/>
+    <path d="M612 158v284"/>
+  </g>
+  <g fill="#2f7a58">
+    <rect x="568" y="170" width="88" height="58" rx="12"/>
+    <rect x="676" y="170" width="88" height="58" rx="12" opacity=".72"/>
+    <rect x="568" y="258" width="196" height="58" rx="12" opacity=".86"/>
+    <rect x="568" y="346" width="72" height="58" rx="12" opacity=".65"/>
+    <rect x="660" y="346" width="104" height="58" rx="12"/>
+  </g>
+  <text x="180" y="455" fill="#23313f" font-family="Arial, sans-serif" font-size="44" font-weight="700">Low-bit LLMs</text>
+  <text x="180" y="492" fill="#64727e" font-family="Arial, sans-serif" font-size="24">Basics · Systems · Algorithms</text>
+</svg>

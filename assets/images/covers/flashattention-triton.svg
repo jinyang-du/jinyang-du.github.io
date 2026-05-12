@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-label="Low-bit FlashAttention Triton cover">
+  <rect width="900" height="600" fill="#fbfcfc"/>
+  <rect x="98" y="94" width="704" height="412" rx="24" fill="#ffffff" stroke="#d9e4ea" stroke-width="3"/>
+  <g stroke="#c9993a" stroke-width="5" fill="none" opacity=".85">
+    <path d="M178 390c90-170 190-170 280 0s190 170 280 0"/>
+    <path d="M178 312c90-132 190-132 280 0s190 132 280 0"/>
+  </g>
+  <g fill="#1d5f8f">
+    <circle cx="230" cy="232" r="34"/>
+    <circle cx="330" cy="232" r="24" opacity=".76"/>
+    <circle cx="430" cy="232" r="34"/>
+    <circle cx="530" cy="232" r="24" opacity=".76"/>
+    <circle cx="630" cy="232" r="34"/>
+  </g>
+  <g fill="#2f7a58">
+    <rect x="244" y="438" width="412" height="18" rx="9"/>
+    <rect x="314" y="468" width="272" height="18" rx="9" opacity=".72"/>
+  </g>
+  <text x="178" y="170" fill="#23313f" font-family="Arial, sans-serif" font-size="44" font-weight="700">Low-bit FlashAttention</text>
+  <text x="178" y="212" fill="#64727e" font-family="Arial, sans-serif" font-size="26">Triton operator design</text>
+</svg>
