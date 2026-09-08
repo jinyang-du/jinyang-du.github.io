@@ -1,0 +1,15 @@
+- name: Research Code
+  label: GitHub profile
+  description: Selected implementations and experiments in efficient AI systems.
+  icon: fab fa-github
+  url: https://github.com/Charles2530
+- name: TBQ
+  label: Featured paper
+  description: Branch-aware low-bit deployment for few-step video diffusion models.
+  icon: fas fa-film
+  url: https://camps.aptaracorp.com/ACM_PMS/PMS/ACM/RICHMEDIAGAI26/8/42b0bc84-97a7-11f1-949e-16ffef0ebbf1/OUT/richmediagai26-8.html
+- name: Research Notes
+  label: Blog
+  description: Technical notes and project updates on efficient model training.
+  icon: fas fa-pen-nib
+  url: https://charles2530.github.io/
