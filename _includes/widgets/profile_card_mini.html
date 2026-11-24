@@ -1,129 +1,94 @@
-<div class="row sticky-top" style="top: 80px">
-    <div class="col">
-        <div class="card border-0 shadow-sm bg-white profile-card">
-            <div class="card-body px-4 pt-4 pb-3">
-                <div class="row">
-                    <div class="col">
-                        {% if site.data.profile.portrait_url %}
-                        <!-- When the screen is wider than md, float the portrait on the right -->
-                        <div class="figure d-none d-md-block">
-                            <img
-                                src="{{ site.data.profile.portrait_url | relative_url }}"
-                                class="figure-img img-fluid"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="{{ site.data.profile.portrait_caption }}">
-                        </div>
-                        <div class="mb-3 d-md-none text-center">
-                            <img src="{{ site.data.profile.portrait_url | relative_url }}" class="rounded-circle" style="max-width: 50%;" alt="Portrait">
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center h4">
-                        {{ site.data.profile.primary_name }}
-                    </div>
-                </div>
+<div class="profile-sticky">
+    <div class="card profile-card">
+        <div class="card-body">
+            {% if site.data.profile.portrait_url %}
+            <img src="{{ site.data.profile.portrait_url | relative_url }}" class="profile-portrait" alt="Portrait of {{ site.data.profile.primary_name }}" width="643" height="900">
+            {% endif %}
 
-                <div class="row small">
-                    <div class="col text-center">
-                        {% for position in site.data.profile.positions %}
-                        {{ position.name }}<br/>
-                        {% endfor %}
-                    </div>
-                </div>
+            <h1 class="profile-name">{{ site.data.profile.primary_name }}</h1>
 
-                <div class="row small mt-2">
-                    <div class="col text-center">
-                        <div class="contact-email-list">
-                            <a class="email-text" href="mailto:{{ site.data.profile.email }}">
-                                {{ site.data.profile.email }}
-                            </a>
-                            {% if site.data.profile.email_alt %}
-                            <a class="email-text" href="mailto:{{ site.data.profile.email_alt }}">
-                                {{ site.data.profile.email_alt }}
-                            </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+            <div class="profile-positions">
+                {% for position in site.data.profile.positions %}
+                <div>{{ position.name }}</div>
+                {% endfor %}
+            </div>
 
-                {% if site.data.profile.advisors %}
-                <div class="row small pt-2">
-                    <div class="col">
-                        <div class="advisor-heading">Advisors</div>
-                        <ul class="advisor-list">
-                        {% for advisor in site.data.profile.advisors %}
-                            <li><span>{{ advisor.role }}:</span> <a target="_blank" href="{{ advisor.url }}">{{ advisor.name }}</a></li>
-                        {% endfor %}
-                        </ul>
-                    </div>
+            <div class="contact-email-list">
+                <a class="email-text" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
+                {% if site.data.profile.email_alt %}
+                <a class="email-text" href="mailto:{{ site.data.profile.email_alt }}">{{ site.data.profile.email_alt }}</a>
+                {% endif %}
+            </div>
+
+            {% if site.data.profile.advisors %}
+            <dl class="advisor-list">
+                {% for advisor in site.data.profile.advisors %}
+                <div>
+                    <dt>{{ advisor.role }}</dt>
+                    <dd><a target="_blank" rel="noopener" href="{{ advisor.url }}">{{ advisor.name }}</a></dd>
                 </div>
+                {% endfor %}
+            </dl>
+            {% endif %}
+
+            <div class="profile-links">
+                {% if site.data.profile.gscholar %}
+                {%- if site.data.profile.gscholar contains 'scholar.google' -%}
+                {%- assign gscholar_url = site.data.profile.gscholar -%}
+                {%- else -%}
+                {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
+                {%- endif -%}
+                <a target="_blank" rel="noopener" href="{{ gscholar_url }}" aria-label="Google Scholar" title="Google Scholar">
+                    <i class="fab fa-google-scholar" aria-hidden="true"></i>
+                </a>
                 {% endif %}
 
-                <div class="row pt-2">
-                    <div class="col text-center h4">
-                        {% if site.data.profile.gscholar %}
-                        {%- if site.data.profile.gscholar contains 'scholar.google' -%}
-                        {%- assign gscholar_url = site.data.profile.gscholar -%}
-                        {%- else -%}
-                        {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
-                        {%- endif -%}
-                        <a class="px-1 no-break" target="_blank" href="{{ gscholar_url }}">
-                            <i class="fab fa-google-scholar"></i>
-                        </a>
-                        {% endif %}
+                {% if site.data.profile.website %}
+                <a target="_blank" rel="noopener" href="{{ site.data.profile.website }}" aria-label="Blog" title="Blog">
+                    <i class="fas fa-pen-nib" aria-hidden="true"></i>
+                </a>
+                {% endif %}
 
-                        {% if site.data.profile.website %}
-                        <a class="px-1 no-break" target="_blank" href="{{ site.data.profile.website }}">
-                            <i class="fas fa-rss"></i>
-                        </a>
-                        {% endif %}
+                {% if site.data.profile.github %}
+                <a target="_blank" rel="noopener" href="https://github.com/{{ site.data.profile.github }}" aria-label="GitHub" title="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                {% endif %}
 
-                        {% if site.data.profile.github %}
-                        <a class="px-1 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        {% endif %}
+                {% if site.data.profile.wechat_qrcode %}
+                <a href="#modal-wechat" data-toggle="modal" data-target="#modal-wechat" aria-label="WeChat" title="WeChat">
+                    <i class="fab fa-weixin" aria-hidden="true"></i>
+                </a>
+                {% endif %}
 
-                        {% if site.data.profile.wechat_qrcode %}
-                        <a class="px-1 no-break" data-toggle="modal" data-target="#modal-wechat">
-                            <i class="fab fa-weixin"></i>
-                        </a>
-                        {% endif %}
+                {% if site.data.profile.twitter %}
+                <a target="_blank" rel="noopener" href="https://twitter.com/{{ site.data.profile.twitter }}" aria-label="Twitter" title="Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                {% endif %}
 
-                        {% if site.data.profile.twitter %}
-                        <a class="px-1 no-break" target="_blank" href="https://twitter.com/{{ site.data.profile.twitter }}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        {% endif %}
+                {% if site.data.profile.linkedin %}
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}" aria-label="LinkedIn" title="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                {% endif %}
 
-                        {% if site.data.profile.linkedin %}
-                        <a class="px-1 no-break" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        {% endif %}
-
-                        {% if site.data.profile.orcid %}
-                        <a class="px-1 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
-                            <i class="fab fa-orcid"></i>
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
+                {% if site.data.profile.orcid %}
+                <a target="_blank" rel="noopener" href="https://orcid.org/{{ site.data.profile.orcid }}" aria-label="ORCID" title="ORCID">
+                    <i class="fab fa-orcid" aria-hidden="true"></i>
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
-
 
 {% if site.data.profile.wechat_qrcode %}
 <div class="modal fade" id="modal-wechat" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-body p-0">
-                <img src="{{ site.data.profile.wechat_qrcode | relative_url }}" class="img-fluid">
+                <img src="{{ site.data.profile.wechat_qrcode | relative_url }}" class="img-fluid" alt="WeChat QR code">
             </div>
             {% if site.data.profile.wechat_prompt %}
             <div class="modal-body p-1">

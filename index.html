@@ -12,51 +12,29 @@ navbar_title: Home
 
         {% include widgets/profile_card_bio_only.html %}
 
-        <div id="research" class="row mt-3">
-            <div class="col">
-                <div class="card border-0 shadow-sm bg-white">
-                    <div class="card-body p-4">
-                        <div class="row px-3 pt-3">
-                            <div class="col h3">Research</div>
-                        </div>
-                        <div class="row p-3">
-                            <div class="col-lg-4 mb-3 mb-lg-0">
-                                <div class="research-chip">
-                                    <i class="fas fa-microchip"></i>
-                                    <span>World Models</span>
-                                    <small>Generative dynamics and simulation</small>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-3 mb-lg-0">
-                                <div class="research-chip">
-                                    <i class="fas fa-gauge-high"></i>
-                                    <span>Efficient Training</span>
-                                    <small>Scalable and stable optimization</small>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="research-chip">
-                                    <i class="fas fa-layer-group"></i>
-                                    <span>System Co-design</span>
-                                    <small>Compression, kernels, and data pipelines</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row px-3 pb-3">
-                            <div class="col">
-                                <p class="mb-2">
-                                    My work studies efficient training technologies for world models, spanning scalable optimization,
-                                    data and systems efficiency, compression-aware training, and hardware-conscious implementation.
-                                </p>
-                                <p class="mb-0 text-muted">
-                                    Current topics: world model training, efficient generative modeling, training system optimization, and model compression.
-                                </p>
-                            </div>
-                        </div>
+        <section id="research" class="card section-card mt-3">
+            <div class="card-body">
+                <h2 class="section-title">Research</h2>
+                <p>
+                    My work studies efficient training technologies for world models, spanning scalable optimization,
+                    data and systems efficiency, compression-aware training, and hardware-conscious implementation.
+                </p>
+                <dl class="topic-list mb-0">
+                    <div class="topic-row">
+                        <dt>World Models</dt>
+                        <dd>Generative dynamics and simulation</dd>
                     </div>
-                </div>
+                    <div class="topic-row">
+                        <dt>Efficient Training</dt>
+                        <dd>Scalable and stable optimization</dd>
+                    </div>
+                    <div class="topic-row">
+                        <dt>System Co-design</dt>
+                        <dd>Compression, kernels, and data pipelines</dd>
+                    </div>
+                </dl>
             </div>
-        </div>
+        </section>
 
         {% if site.data.display.homepage.show_experience %}
             {% include widgets/experience_card.html %}
@@ -74,30 +52,22 @@ navbar_title: Home
         {%
         include widgets/publication_card.html
         publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
+        title='Selected Publications'
         %}
         {% endif %}
 
-        <div id="honors" class="row mt-3">
-            <div class="col">
-                <div class="card border-0 shadow-sm bg-white">
-                    <div class="card-body p-4">
-                        <div class="row px-3 pt-3">
-                            <div class="col h3">Leadership & Campus Service</div>
-                        </div>
-                        <div class="row p-3">
-                            {% for item in site.data.profile.leadership %}
-                            <div class="col-lg-4 mb-3 mb-lg-0">
-                                <div class="service-block">
-                                    <h6>{{ item.title }}</h6>
-                                    <p>{{ item.text }}</p>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
+        <section id="service" class="card section-card mt-3">
+            <div class="card-body">
+                <h2 class="section-title">Leadership & Campus Service</h2>
+                <ul class="service-list">
+                    {% for item in site.data.profile.leadership %}{% unless item.title %}{% continue %}{% endunless %}
+                    <li>
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.text }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
-        </div>
+        </section>
     </div>
 </div>
